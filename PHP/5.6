@@ -1,0 +1,5 @@
+FROM debian:latest
+
+ADD http://http.debian.net/debian/project/trace/ftp-master.debian.org /etc/trace_ftp-master.debian.org
+ADD http://security.debian.org/project/trace/security-master.debian.org /etc/trace_security-master.debian.org
+RUN apt-get update && apt-get -y dist-upgrade && apt-get -y autoremove && apt-get clean
