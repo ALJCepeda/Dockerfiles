@@ -18,4 +18,4 @@ RUN printf '%s\n%s\n' \
 	| tee -a /etc/apt/sources.list 
 
 RUN apt-get update && apt-get -y dist-upgrade && apt-get -y autoremove && apt-get clean
-RUN apt-get -y install apt-utils dialog wget less
+RUN apt-get -y install apt-utils dialog wget less curl
