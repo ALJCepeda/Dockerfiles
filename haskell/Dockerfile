@@ -1,5 +1,5 @@
-FROM literphor/basedebian:latest
-MAINTAINER Literphor
+FROM aljcepeda/debian:latest
+MAINTAINER aljcepeda
 
 LABEL Version="1.0"
 

@@ -1,5 +1,5 @@
 FROM debian:wheezy
-MAINTAINER Literphor
+MAINTAINER aljcepeda
 
 LABEL Version="1.0"
 
@@ -15,7 +15,7 @@ RUN apt-get update
 RUN printf '%s\n%s\n' \
 	'deb http://packages.dotdeb.org wheezy all' \
 	'deb-src http://packages.dotdeb.org wheezy all' \
-	| tee -a /etc/apt/sources.list 
+	| tee -a /etc/apt/sources.list
 
 RUN apt-get update && apt-get -y dist-upgrade && apt-get -y autoremove && apt-get clean
 RUN apt-get -y install apt-utils binutils dialog wget less curl vim

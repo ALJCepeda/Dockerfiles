@@ -1,5 +1,5 @@
-FROM literphor/basedebian:latest
-MAINTAINER Literphor
+FROM aljcepeda/debian:latest
+MAINTAINER aljcepeda
 
 LABEL Version="1.0"
 
@@ -9,5 +9,5 @@ RUN printf '%s\n%s\n' \
 	| tee -a /etc/apt/sources.list
 RUN wget http://www.dotdeb.org/dotdeb.gpg
 RUN apt-key add dotdeb.gpg
-RUN apt-get update	
+RUN apt-get update
 RUN apt-get -y install php5-cli
